@@ -6,7 +6,6 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Caviar Dreams';
     src: url('./fonts/CaviarDreams.woff2') format('woff2'),
@@ -76,8 +75,9 @@
 }
 .form-title {
     font-weight: normal;
+    flex-basis: 100%;
+    padding-top: 1rem;
 }
-
 body {
     display: flex;
     height: 100vh;
@@ -89,6 +89,21 @@ body {
     padding: var(--padding);
     margin: var(--margin);
     box-shadow: 0 3px 7px rgb(128, 128, 128, 0.5);
+}
+.form-control {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%
+}
+input {
+    width: clamp(250px, 300px, 350px);
+}
+input[type="password"]:invalid {
+    border: red;
+}
+label {
+    font-weight: bold;
+    font-size: 0.75rem;
 }
 .bg-img {
     display: flex;
@@ -104,12 +119,10 @@ body {
     text-decoration: underline;
     color: white;
 }
-
 .btn-container > p {
     margin: var(--margin);
     font-weight: bold;
 }
-
 .btn-container a {
     color:#596D48;
 }
@@ -121,4 +134,25 @@ body {
     cursor: pointer;
     font-weight: bold;
     font-size: 1rem;
+}
+.widgets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-content: flex-start;
+    width: 70%;
+    padding: 1rem 0 1.5rem;
+}
+input {
+    --border-clr: gray;
+    border-radius: 2px;
+    height: 1.5rem;
+    border: 1px solid var(--border-clr) ;
+    outline: none;
+}
+input:focus {
+    --border-clr: blue;
+}
+input:user-invalid {
+    --border-clr: red;
 }
