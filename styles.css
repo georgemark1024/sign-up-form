@@ -33,13 +33,14 @@
 .bg-img {
     background-image: url(./assets/background.jpg);
     background-size: cover;
-    min-width: 25vw;
+    min-width: 30vw;
     height: 100%;
     color: white;
     position: relative;
 }
 .form-container {
     --padding: 0 2rem;
+    --margin: 2rem 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -85,7 +86,9 @@ body {
 #sign-up-form {
     background-color: rgb(255, 255, 255);
     width: 100%;
-    box-shadow: ;
+    padding: var(--padding);
+    margin: var(--margin);
+    box-shadow: 0 3px 7px rgb(128, 128, 128, 0.5);
 }
 .bg-img {
     display: flex;
@@ -100,4 +103,22 @@ body {
 .attribute a {
     text-decoration: underline;
     color: white;
+}
+
+.btn-container > p {
+    margin: var(--margin);
+    font-weight: bold;
+}
+
+.btn-container a {
+    color:#596D48;
+}
+.btn-container > button {
+    padding: 0.5rem 2.5rem;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    background-color: #596D48;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
 }
